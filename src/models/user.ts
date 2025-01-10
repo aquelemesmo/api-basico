@@ -26,11 +26,4 @@ export class User extends Model {
         allowNull: false
     })
     age!: number;
-
-    //obrigatório
-    @Column({
-        type: DataType.STRING,
-        allowNull: false
-    })
-    product!: string;
 }

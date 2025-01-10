@@ -31,19 +31,6 @@ export const getUser = async(req: Request, res: Response) => {
     }
 }
 
-export const getAllUser = async(req: Request, res: Response) => {
-    try {
-        const user = await User.findAll();
-        if(user) {
-            res.status(200).json(user);
-        } else {
-            res.status(404).json({message: 'Usuário não encontrado!'});
-        }
-    } catch(error) {
-        res.status(400).json({message: error});
-    }
-}
-
 export const deleteUser = async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
